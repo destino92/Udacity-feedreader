@@ -124,6 +124,10 @@ $(function() {
 
     /* TODO: Write a new test suite named "New Feed Selection"*/
     describe('New Feed Selection', function(){
+        //Declare two variable to contain the content of the first and second feed
+        var firstFeed,
+            secondFeed;
+            
         /* TODO: Write a test that ensures when a new feed is loaded
          * by the loadFeed function that the content actually changes.
          * Remember, loadFeed() is asynchronous.
