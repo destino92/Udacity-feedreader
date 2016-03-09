@@ -127,10 +127,33 @@ $(function() {
         //Declare two variable to contain the content of the first and second feed
         var firstFeed,
             secondFeed;
-            
+
+        beforeEach(function(done){
+
+            // Load the first feed
+            loadFeed(0, function(){
+                // Get the content of the first h2 element. 
+                firstFeed = $('.feed').find('h2').text();
+                done();
+            });
+        });
+
         /* TODO: Write a test that ensures when a new feed is loaded
          * by the loadFeed function that the content actually changes.
          * Remember, loadFeed() is asynchronous.
          */
+        it('changes the content inside .feed container', function(done){
+
+            //Load the first second 
+            loadFeed(1, function(){
+                //Get the content of the first h2 element.
+                secondFeed = $('.feed').find('h2').text();
+
+                //Compare firstFeed with secondFeed.
+                expect(firstFeed).not.toEqual(secondFeed);
+                done();
+            });
+            
+        });
     });
 }());
