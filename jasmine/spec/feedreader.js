@@ -115,12 +115,18 @@ $(function() {
          * Remember, loadFeed() is asynchronous so this test will require
          * the use of Jasmine's beforeEach and asynchronous done() function.
          */
+        it('has at least a single .entry element', function(done){
+            //Compare the size of all the .entry-link array to zero.
+            expect($('.feed .entry').length).toBeGreaterThan(0);
+            done();
+        });
     });
-    
-    /* TODO: Write a new test suite named "New Feed Selection"
 
+    /* TODO: Write a new test suite named "New Feed Selection"*/
+    describe('New Feed Selection', function(){
         /* TODO: Write a test that ensures when a new feed is loaded
          * by the loadFeed function that the content actually changes.
          * Remember, loadFeed() is asynchronous.
          */
+    });
 }());
