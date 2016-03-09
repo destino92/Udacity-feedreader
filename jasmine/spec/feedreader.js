@@ -32,6 +32,15 @@ $(function() {
          * and that the URL is not empty.
          */
 
+        it('have a url property', function() {
+
+            allFeeds.forEach(function(feed){
+                //Test if each object has a URL property.
+                expect(feed.url).toBeDefined();
+                //Test if each object URL property is not an empty string.
+                expect(feed.url).not.toBe("");
+            });
+        });
 
         /* TODO: Write a test that loops through each feed
          * in the allFeeds object and ensures it has a name defined
