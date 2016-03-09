@@ -96,7 +96,7 @@ $(function() {
             $('.feed-list a:first').click();
             //Test that the body element class toggle to true when a link is clicked.
             expect($('body').hasClass('menu-hidden')).toBe(true);
-        })
+        });
 
     });
 
