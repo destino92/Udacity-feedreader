@@ -85,6 +85,19 @@ $(function() {
             //Test that the body element class toggle to true when the .menu-icon-link is clicked.
             expect($('body').hasClass('menu-hidden')).toBe(true);
         });
+
+        //Extra tests
+        it('should have a list that contains 4 links',function(){
+            //Test that .feed-list has 4 links.
+            expect($('.feed-list').find('a').length).toEqual(4);
+        });
+
+        it('it should be hidden when one of the link is clicked',function(){
+            $('.feed-list a:first').click();
+            //Test that the body element class toggle to true when a link is clicked.
+            expect($('body').hasClass('menu-hidden')).toBe(true);
+        })
+        
     });
 
     /* TODO: Write a new test suite named "Initial Entries" */
