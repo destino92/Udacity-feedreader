@@ -92,23 +92,31 @@ $(function() {
             expect($('.feed-list').find('a').length).toEqual(4);
         });
 
-        it('it should be hidden when one of the link is clicked',function(){
+        it('should be hidden when one of the link is clicked',function(){
             $('.feed-list a:first').click();
             //Test that the body element class toggle to true when a link is clicked.
             expect($('body').hasClass('menu-hidden')).toBe(true);
         })
-        
+
     });
 
     /* TODO: Write a new test suite named "Initial Entries" */
+    describe('Initial Entries', function(){
 
+        beforeEach(function(done){
+            //load feed
+            loadFeed(0, function(){
+                done();
+            });
+        });
         /* TODO: Write a test that ensures when the loadFeed
          * function is called and completes its work, there is at least
          * a single .entry element within the .feed container.
          * Remember, loadFeed() is asynchronous so this test will require
          * the use of Jasmine's beforeEach and asynchronous done() function.
          */
-
+    });
+    
     /* TODO: Write a new test suite named "New Feed Selection"
 
         /* TODO: Write a test that ensures when a new feed is loaded
