@@ -1,6 +1,6 @@
 # Feed Reader Testing Project.
 ## Description
-
+Using **Jasmine** framework to test code.
 
 ## Motivation
 This is a project that was part of my [front-end nanodegree](https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001). I was given starter code and asked to implement testing using the [jasmine framework](http://jasmine.github.io/) for javascript testing.
